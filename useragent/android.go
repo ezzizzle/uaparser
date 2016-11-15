@@ -32,5 +32,10 @@ func (device *Device) parseAndroidUA() {
 		}
 	}
 
+	if androidDevice, ok := AndroidDeviceMappings()[device.Model]; ok {
+		// Use the pretty name
+		device.Model = androidDevice.PrettyName()
+	}
+
 	device.getAppDetails()
 }
