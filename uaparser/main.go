@@ -1,48 +1,48 @@
 package main
 
 import (
-    "flag"
-    "fmt"
-    "github.com/ezzizzle/uaparser/useragent"
-    "os"
+	"flag"
+	"fmt"
+	"github.com/ezzizzle/uaparser/useragent"
+	"os"
 )
 
 type uaSlice []string
 
 func (ua *uaSlice) String() string {
-    return fmt.Sprintf("%s", *ua)
+	return fmt.Sprintf("%s", *ua)
 }
 
 func (ua *uaSlice) Set(value string) error {
-    *ua = append(*ua, value)
-    return nil
+	*ua = append(*ua, value)
+	return nil
 }
 
 func main() {
-    var userAgents uaSlice
+	var userAgents uaSlice
 
-    flag.Var(&userAgents, "ua", "User Agents to Parse (Specify multiple with multiple -ua args)")
-    flag.Parse()
+	flag.Var(&userAgents, "ua", "User Agents to Parse (Specify multiple with multiple -ua args)")
+	flag.Parse()
 
-    if len(userAgents) < 1 {
-        flag.PrintDefaults()
-        os.Exit(1)
-    }
+	if len(userAgents) < 1 {
+		flag.PrintDefaults()
+		os.Exit(1)
+	}
 
-    uaMap := map[string]useragent.Device{}
+	uaMap := map[string]useragent.Device{}
 
-    for _, userAgent := range userAgents {
-        var device useragent.Device
-        if foundDevice, ok := uaMap[userAgent]; ok {
-            // UA In Map, return this device
-            device = foundDevice
-        } else {
-            device = useragent.DeviceFromUA(userAgent)
-            uaMap[userAgent] = device
-        }
+	for _, userAgent := range userAgents {
+		var device useragent.Device
+		if foundDevice, ok := uaMap[userAgent]; ok {
+			// UA In Map, return this device
+			device = foundDevice
+		} else {
+			device = useragent.DeviceFromUA(userAgent)
+			uaMap[userAgent] = device
+		}
 
-        device.Print()
-    }
+		device.Print()
+	}
 }
 
 // Sample run
