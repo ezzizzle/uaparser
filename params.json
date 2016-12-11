@@ -1,0 +1,6 @@
+{
+  "name": "UAParser",
+  "tagline": "User Agent Parser in Go",
+  "body": "### UAParser\r\nThis is my attempt at a User Agent Parser written in Go. \r\nI've never written Go before so it was more for me to learn how to write something in Go.\r\nGo.\r\n\r\n### Should you use this?\r\nI wouldn't recommend it. The project will never be complete and probably contains many Go faux pas.\r\n\r\n### So why am I even looking at this?\r\nGood question. But if you like something and want to get in touch feel free.\r\n\r\n### And you then built a page for it?\r\nYes I did. I wanted to see how GitHub pages work. Seems like a pretty easy way to get a site up and going without having to do any heavy lifting which is nice.",
+  "note": "Don't delete this file! It's used internally to help with page regeneration."
+}
