@@ -1,6 +1,6 @@
 # uaparser
 
-A user agent parser written in Go: [http://ezzizzle.github.io/uaparser/]()
+A user agent parser written in Go: [http://ezzizzle.github.io/uaparser/](http://ezzizzle.github.io/uaparser/)
 
 Written to get a handle on Go. Would not use this for anything.
 
