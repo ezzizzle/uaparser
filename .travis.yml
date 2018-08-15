@@ -2,15 +2,13 @@ language: go
 go:
   - "1.10"
 
-install:
-  - go get -u github.com/jteeuwen/go-bindata/...
+# install:
+#   - go get -u github.com/jteeuwen/go-bindata/...
 
-before_script:
-  - cd useragent
-  - go-bindata reference/
-  - cd "${TRAVIS_BUILD_DIR}"
-  - pwd
-  - ls
+# before_script:
+#   - cd useragent
+#   - go-bindata reference/
+#   - cd "${TRAVIS_BUILD_DIR}"
 
 script:
   - go test ./...
