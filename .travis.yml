@@ -9,6 +9,8 @@ before_script:
   - cd useragent
   - go-bindata reference/
   - cd ..
+  - pwd
+  - ls
 
 script:
   - go test ./...
