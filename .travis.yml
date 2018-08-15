@@ -2,9 +2,12 @@ language: go
 go:
   - "1.10"
 
-script:
+install:
   - go get -u github.com/jteeuwen/go-bindata/...
+
+before_script:
   - cd useragent
   - go-bindata reference/
-  - cd ..
+
+script:
   - go test ./...
