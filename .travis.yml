@@ -8,6 +8,7 @@ install:
 before_script:
   - cd useragent
   - go-bindata reference/
+  - cd ..
 
 script:
   - go test ./...
