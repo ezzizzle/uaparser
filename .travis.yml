@@ -1,0 +1,7 @@
+language: go
+go:
+  - "1.10"
+
+script:
+  - go get -u github.com/jteeuwen/go-bindata/... && cd useragent && go-bindata reference/
+  - go test ./...
