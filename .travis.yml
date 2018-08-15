@@ -8,7 +8,7 @@ install:
 before_script:
   - cd useragent
   - go-bindata reference/
-  - cd ..
+  - cd "${TRAVIS_BUILD_DIR}"
   - pwd
   - ls
 
