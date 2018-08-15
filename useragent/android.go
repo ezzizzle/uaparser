@@ -1,8 +1,9 @@
 package useragent
 
 import (
-	"github.com/ezzizzle/uaparser/regex"
 	"regexp"
+
+	"github.com/ezzizzle/uaparser/regex"
 )
 
 // Android User Agents are in the format

@@ -4,11 +4,12 @@ import (
 	"encoding/json"
 	"flag"
 	"fmt"
-	"github.com/ezzizzle/uaparser/useragent"
 	"io/ioutil"
 	"log"
 	"net/http"
 	"strings"
+
+	"github.com/ezzizzle/uaparser/useragent"
 )
 
 // UAResponses is a list of UAResponse structs
